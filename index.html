@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>猴子網頁</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: url('Messenger_creation_6A242AB0-1A8A-4F97-BFB4-D9530878D42D.gif') no-repeat center center;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      transition: background 0.5s ease;
+    }
+    #monkeyText {
+      font-size: 48px;
+      color: white;
+      text-shadow: 2px 2px 5px black;
+      cursor: pointer;
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="monkeyText">猴子 = monkey</div>
+
+  <audio id="music" src="monkey_brother.mp3"></audio>
+
+  <script>
+    const text = document.getElementById('monkeyText');
+    const music = document.getElementById('music');
+    const body = document.body;
+
+    text.addEventListener('click', () => {
+      music.play();
+      body.style.background = "url('Sun_Wukong.webp') no-repeat center center";
+      body.style.backgroundSize = "cover";
+    });
+  </script>
+</body>
+</html>
